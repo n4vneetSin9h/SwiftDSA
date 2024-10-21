@@ -90,4 +90,106 @@ class SLList<T: Equatable & Comparable> {
         }
         return false
     }
+    
+    func search(item: SNode<T>) -> Int? {
+        var index = 0
+        var node = head
+        while node != nil {
+            if node! == item {
+                return index
+            }
+            node = node!.next
+            index += 1
+        }
+        return nil
+    }
+    
+    func insert(at index: Int, item: SNode<T>) {
+        if index < 0 || index > size() {
+            return
+        }
+        
+        // Inserting at the head
+        if index == 0 {
+            item.next = head
+            head = item
+            return
+        }
+        
+        // Traverse the list to find the correct spot
+        var idx = 0
+        var node = head
+        while node != nil {
+            if index == idx + 1 {
+                item.next = node!.next
+                node!.next = item
+                return
+            }
+            node = node!.next
+            idx += 1
+        }
+    }
+    
+    func delete(at index: Int) -> SNode<T>? {
+        if head == nil || index < 0 || index >= size() {
+            return nil
+        }
+        
+        if index == 0 {
+            let node = head
+            head = head?.next
+            return node
+        }
+        
+        var idx = 0
+        var node = head
+        var prev: SNode<T>? = nil
+        while node != nil {
+            if index == idx {
+                prev?.next = node?.next
+                return node
+            }
+            prev = node
+            node = node?.next
+            idx += 1
+        }
+        
+        return nil
+    }
+    
+    func reverse() {
+        var prev: SNode<T>? = nil
+        var current = head
+        var next: SNode<T>? = nil
+        
+        while current != nil {
+            // Store the next node
+            next = current?.next
+            
+            // Reverse the current node's pointer
+            current?.next = prev
+            
+            // Move prev and current one step forward
+            prev = current
+            current = next
+        }
+        
+        // Update head to be the last processed node (prev)
+        head = prev
+    }
+    
+    func get(index: Int) -> SNode<T>? {
+        var idx = 0
+        var node = head
+        while node != nil {
+            if idx == index {
+                return node
+            }
+            node = node?.next
+            idx += 1
+        }
+        
+        return nil
+    }
+    
 }
