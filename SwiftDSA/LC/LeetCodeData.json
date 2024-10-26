@@ -1,17 +1,17 @@
 [
   {
+    "completed" : true,
     "name" : "Merge Sorted Array",
-    "type" : "easy",
-    "completed" : true
+    "type" : "easy"
   },
   {
+    "type" : "easy",
     "name" : "Remove Element",
-    "type" : "easy",
     "completed" : true
   },
   {
-    "name" : "Remove Duplicates from Sorted Array",
     "type" : "easy",
+    "name" : "Remove Duplicates from Sorted Array",
     "completed" : true
   },
   {
@@ -20,29 +20,29 @@
     "completed" : true
   },
   {
-    "type" : "easy",
     "completed" : true,
+    "type" : "easy",
     "name" : "Best Time to Buy and Sell Stock"
   },
   {
     "completed" : true,
-    "name" : "Roman to Integer",
-    "type" : "easy"
-  },
-  {
-    "name" : "Length of Last Word",
     "type" : "easy",
-    "completed" : true
-  },
-  {
-    "type" : "easy",
-    "name" : "Longest Common Prefix",
-    "completed" : true
+    "name" : "Roman to Integer"
   },
   {
     "completed" : true,
-    "type" : "easy",
-    "name" : "Find the Index of the First Occurrence in a String"
+    "name" : "Length of Last Word",
+    "type" : "easy"
+  },
+  {
+    "completed" : true,
+    "name" : "Longest Common Prefix",
+    "type" : "easy"
+  },
+  {
+    "name" : "Find the Index of the First Occurrence in a String",
+    "completed" : true,
+    "type" : "easy"
   },
   {
     "completed" : true,
@@ -50,14 +50,14 @@
     "type" : "easy"
   },
   {
+    "name" : "Is Subsequence",
     "completed" : true,
-    "type" : "easy",
-    "name" : "Is Subsequence"
+    "type" : "easy"
   },
   {
+    "name" : "Ransom Note",
     "type" : "easy",
-    "completed" : true,
-    "name" : "Ransom Note"
+    "completed" : true
   },
   {
     "name" : "Isomorphic Strings",
@@ -66,47 +66,47 @@
   },
   {
     "type" : "easy",
-    "name" : "Word Pattern",
+    "completed" : true,
+    "name" : "Word Pattern"
+  },
+  {
+    "name" : "Valid Anagram",
+    "type" : "easy",
     "completed" : true
   },
   {
-    "completed" : false,
-    "type" : "easy",
-    "name" : "Valid Anagram"
-  },
-  {
-    "type" : "easy",
     "name" : "Two Sum",
+    "type" : "easy",
     "completed" : true
   },
   {
-    "name" : "Happy Number",
-    "completed" : false,
-    "type" : "easy"
+    "type" : "easy",
+    "completed" : true,
+    "name" : "Happy Number"
   },
   {
     "name" : "Contains Duplicate II",
-    "completed" : false,
-    "type" : "easy"
+    "type" : "easy",
+    "completed" : true
   },
   {
+    "name" : "Summary Ranges",
     "type" : "easy",
-    "completed" : false,
-    "name" : "Summary Ranges"
+    "completed" : false
   },
   {
     "name" : "Valid Parentheses",
-    "completed" : true,
-    "type" : "easy"
-  },
-  {
-    "completed" : false,
-    "name" : "Linked List Cycle",
-    "type" : "easy"
-  },
-  {
     "type" : "easy",
+    "completed" : true
+  },
+  {
+    "name" : "Linked List Cycle",
+    "type" : "easy",
+    "completed" : true
+  },
+  {
     "name" : "Merge Two Sorted Lists",
+    "type" : "easy",
     "completed" : true
   },
   {
@@ -115,39 +115,39 @@
     "completed" : false
   },
   {
+    "completed" : false,
+    "name" : "Same Tree",
+    "type" : "easy"
+  },
+  {
     "type" : "easy",
     "completed" : false,
-    "name" : "Same Tree"
+    "name" : "Invert Binary Tree"
   },
   {
-    "type" : "easy",
-    "name" : "Invert Binary Tree",
-    "completed" : false
-  },
-  {
+    "completed" : false,
     "name" : "Symmetric Tree",
+    "type" : "easy"
+  },
+  {
+    "name" : "Path Sum",
+    "completed" : false,
+    "type" : "easy"
+  },
+  {
+    "name" : "Count Complete Tree Nodes",
     "type" : "easy",
     "completed" : false
   },
   {
-    "completed" : false,
-    "name" : "Path Sum",
-    "type" : "easy"
-  },
-  {
-    "completed" : false,
-    "name" : "Count Complete Tree Nodes",
-    "type" : "easy"
-  },
-  {
-    "completed" : false,
-    "name" : "Average of Levels in Binary Tree",
-    "type" : "easy"
-  },
-  {
-    "completed" : false,
     "type" : "easy",
-    "name" : "Minimum Absolute Difference in BST"
+    "completed" : false,
+    "name" : "Average of Levels in Binary Tree"
+  },
+  {
+    "completed" : false,
+    "name" : "Minimum Absolute Difference in BST",
+    "type" : "easy"
   },
   {
     "name" : "Convert Sorted Array to Binary Search Tree",
@@ -155,14 +155,14 @@
     "completed" : false
   },
   {
-    "type" : "easy",
+    "name" : "Search Insert Position",
     "completed" : true,
-    "name" : "Search Insert Position"
+    "type" : "easy"
   },
   {
-    "completed" : false,
-    "name" : "Add Binary",
-    "type" : "easy"
+    "completed" : true,
+    "type" : "easy",
+    "name" : "Add Binary"
   },
   {
     "type" : "easy",
@@ -171,103 +171,103 @@
   },
   {
     "completed" : false,
-    "name" : "Number of 1 Bits",
-    "type" : "easy"
+    "type" : "easy",
+    "name" : "Number of 1 Bits"
   },
   {
     "name" : "Single Number",
-    "type" : "easy",
-    "completed" : false
+    "completed" : false,
+    "type" : "easy"
   },
   {
     "type" : "easy",
-    "name" : "Palindrome Number",
-    "completed" : true
+    "completed" : true,
+    "name" : "Palindrome Number"
   },
   {
     "name" : "Plus One",
     "type" : "easy",
-    "completed" : false
+    "completed" : true
   },
   {
-    "completed" : false,
     "type" : "easy",
+    "completed" : true,
     "name" : "Sqrt(x)"
   },
   {
+    "name" : "Climbing Stairs",
     "type" : "easy",
-    "completed" : false,
-    "name" : "Climbing Stairs"
+    "completed" : true
   },
   {
-    "type" : "easy",
     "name" : "Merge Strings Alternately",
+    "type" : "easy",
     "completed" : false
   },
   {
-    "type" : "easy",
     "completed" : false,
-    "name" : "Greatest Common Divisor of Strings"
+    "name" : "Greatest Common Divisor of Strings",
+    "type" : "easy"
   },
   {
+    "completed" : false,
     "name" : "Kids With the Greatest Number of Candies",
+    "type" : "easy"
+  },
+  {
+    "name" : "Can Place Flowers",
     "completed" : false,
     "type" : "easy"
   },
   {
-    "type" : "easy",
     "completed" : false,
-    "name" : "Can Place Flowers"
+    "name" : "Reverse Vowels of a String",
+    "type" : "easy"
   },
   {
-    "completed" : false,
+    "name" : "Move Zeroes",
     "type" : "easy",
-    "name" : "Reverse Vowels of a String"
-  },
-  {
-    "type" : "easy",
-    "completed" : false,
-    "name" : "Move Zeroes"
-  },
-  {
-    "type" : "easy",
-    "name" : "Maximum Average Subarray I",
     "completed" : false
+  },
+  {
+    "completed" : false,
+    "name" : "Maximum Average Subarray I",
+    "type" : "easy"
   },
   {
     "name" : "Find the Highest Altitude",
-    "type" : "easy",
-    "completed" : false
-  },
-  {
-    "type" : "easy",
-    "name" : "Find Pivot Index",
-    "completed" : false
-  },
-  {
-    "type" : "easy",
     "completed" : false,
-    "name" : "Find the Difference of Two Arrays"
+    "type" : "easy"
   },
   {
     "completed" : false,
-    "name" : "Unique Number of Occurrences",
+    "type" : "easy",
+    "name" : "Find Pivot Index"
+  },
+  {
+    "completed" : false,
+    "name" : "Find the Difference of Two Arrays",
     "type" : "easy"
   },
   {
     "type" : "easy",
-    "name" : "Number of Recent Calls",
-    "completed" : false
-  },
-  {
-    "name" : "Reverse Linked List",
-    "type" : "easy",
-    "completed" : false
-  },
-  {
-    "type" : "easy",
     "completed" : false,
-    "name" : "Leaf-Similar Trees"
+    "name" : "Unique Number of Occurrences"
+  },
+  {
+    "name" : "Number of Recent Calls",
+    "type" : "easy",
+    "completed" : false
+  },
+  {
+    "completed" : false,
+    "type" : "easy",
+    "name" : "Reverse Linked List"
+  },
+  {
+    "completed" : false,
+    "name" : "Leaf-Similar Trees",
+    "type" : "easy"
   },
   {
     "type" : "easy",
@@ -275,29 +275,29 @@
     "name" : "Search in a Binary Search Tree"
   },
   {
-    "completed" : false,
+    "type" : "easy",
     "name" : "Guess Number Higher or Lower",
-    "type" : "easy"
+    "completed" : false
   },
   {
-    "name" : "N-th Tribonacci Number",
     "type" : "easy",
+    "name" : "N-th Tribonacci Number",
     "completed" : false
   },
   {
     "completed" : false,
-    "name" : "Min Cost Climbing Stairs",
-    "type" : "easy"
+    "type" : "easy",
+    "name" : "Min Cost Climbing Stairs"
   },
   {
+    "completed" : false,
     "name" : "Counting Bits",
-    "completed" : false,
     "type" : "easy"
   },
   {
-    "name" : "Binary Tree Inorder Traversal",
+    "type" : "easy",
     "completed" : false,
-    "type" : "easy"
+    "name" : "Binary Tree Inorder Traversal"
   },
   {
     "name" : "Diameter of Binary Tree",
@@ -305,14 +305,14 @@
     "completed" : false
   },
   {
-    "name" : "Pascal's Triangle",
     "completed" : false,
+    "name" : "Pascal's Triangle",
     "type" : "easy"
   },
   {
     "type" : "easy",
-    "completed" : false,
-    "name" : "Intersection of Two Linked Lists"
+    "name" : "Intersection of Two Linked Lists",
+    "completed" : false
   },
   {
     "type" : "easy",
@@ -325,49 +325,49 @@
     "completed" : true
   },
   {
-    "type" : "medium",
-    "completed" : true,
-    "name" : "Rotate Array"
-  },
-  {
-    "name" : "Best Time to Buy and Sell Stock II",
+    "name" : "Rotate Array",
     "type" : "medium",
     "completed" : true
+  },
+  {
+    "type" : "medium",
+    "completed" : true,
+    "name" : "Best Time to Buy and Sell Stock II"
   },
   {
     "name" : "Jump Game",
-    "completed" : true,
-    "type" : "medium"
-  },
-  {
-    "completed" : true,
-    "name" : "Jump Game II",
-    "type" : "medium"
-  },
-  {
-    "type" : "medium",
-    "completed" : true,
-    "name" : "H-Index"
-  },
-  {
-    "name" : "Insert Delete GetRandom O(1)",
     "type" : "medium",
     "completed" : true
   },
   {
+    "completed" : true,
+    "type" : "medium",
+    "name" : "Jump Game II"
+  },
+  {
+    "completed" : true,
+    "name" : "H-Index",
+    "type" : "medium"
+  },
+  {
+    "completed" : true,
+    "type" : "medium",
+    "name" : "Insert Delete GetRandom O(1)"
+  },
+  {
+    "completed" : true,
     "name" : "Product of Array Except Self",
-    "type" : "medium",
-    "completed" : true
+    "type" : "medium"
   },
   {
-    "type" : "medium",
     "name" : "Gas Station",
-    "completed" : false
+    "completed" : false,
+    "type" : "medium"
   },
   {
+    "name" : "Integer to Roman",
     "type" : "medium",
-    "completed" : false,
-    "name" : "Integer to Roman"
+    "completed" : false
   },
   {
     "name" : "Reverse Words in a String",
@@ -375,24 +375,24 @@
     "completed" : false
   },
   {
-    "type" : "medium",
+    "name" : "Zigzag Conversion",
     "completed" : false,
-    "name" : "Zigzag Conversion"
+    "type" : "medium"
   },
   {
-    "type" : "medium",
     "name" : "Two Sum II - Input Array Is Sorted",
-    "completed" : true
+    "completed" : true,
+    "type" : "medium"
   },
   {
-    "type" : "medium",
+    "completed" : false,
     "name" : "Container With Most Water",
-    "completed" : false
+    "type" : "medium"
   },
   {
+    "completed" : false,
     "name" : "3Sum",
-    "type" : "medium",
-    "completed" : false
+    "type" : "medium"
   },
   {
     "name" : "Minimum Size Subarray Sum",
@@ -411,18 +411,18 @@
   },
   {
     "type" : "medium",
-    "name" : "Spiral Matrix",
-    "completed" : false
+    "completed" : false,
+    "name" : "Spiral Matrix"
   },
   {
-    "completed" : true,
-    "name" : "Rotate Image",
-    "type" : "medium"
-  },
-  {
-    "name" : "Set Matrix Zeroes",
     "type" : "medium",
-    "completed" : false
+    "completed" : true,
+    "name" : "Rotate Image"
+  },
+  {
+    "completed" : false,
+    "name" : "Set Matrix Zeroes",
+    "type" : "medium"
   },
   {
     "name" : "Game of Life",
@@ -430,29 +430,29 @@
     "completed" : false
   },
   {
-    "type" : "medium",
     "completed" : false,
-    "name" : "Group Anagrams"
-  },
-  {
-    "name" : "Longest Consecutive Sequence",
-    "type" : "medium",
-    "completed" : false
-  },
-  {
-    "type" : "medium",
-    "name" : "Merge Intervals",
-    "completed" : false
-  },
-  {
-    "type" : "medium",
-    "completed" : false,
-    "name" : "Insert Interval"
+    "name" : "Group Anagrams",
+    "type" : "medium"
   },
   {
     "completed" : false,
     "type" : "medium",
-    "name" : "Minimum Number of Arrows to Burst Balloons"
+    "name" : "Longest Consecutive Sequence"
+  },
+  {
+    "type" : "medium",
+    "completed" : false,
+    "name" : "Merge Intervals"
+  },
+  {
+    "completed" : false,
+    "name" : "Insert Interval",
+    "type" : "medium"
+  },
+  {
+    "completed" : false,
+    "name" : "Minimum Number of Arrows to Burst Balloons",
+    "type" : "medium"
   },
   {
     "name" : "Simplify Path",
@@ -460,38 +460,38 @@
     "completed" : false
   },
   {
+    "name" : "Min Stack",
     "type" : "medium",
+    "completed" : false
+  },
+  {
+    "name" : "Evaluate Reverse Polish Notation",
     "completed" : false,
-    "name" : "Min Stack"
+    "type" : "medium"
   },
   {
     "completed" : false,
-    "type" : "medium",
-    "name" : "Evaluate Reverse Polish Notation"
-  },
-  {
     "name" : "Add Two Numbers",
-    "completed" : false,
     "type" : "medium"
   },
   {
-    "completed" : false,
     "name" : "Copy List with Random Pointer",
-    "type" : "medium"
+    "type" : "medium",
+    "completed" : false
   },
   {
-    "type" : "medium",
     "completed" : false,
+    "type" : "medium",
     "name" : "Reverse Linked List II"
   },
   {
     "completed" : false,
-    "type" : "medium",
-    "name" : "Remove Nth Node From End of List"
+    "name" : "Remove Nth Node From End of List",
+    "type" : "medium"
   },
   {
-    "name" : "Remove Duplicates from Sorted List II",
     "completed" : false,
+    "name" : "Remove Duplicates from Sorted List II",
     "type" : "medium"
   },
   {
@@ -500,38 +500,38 @@
     "type" : "medium"
   },
   {
+    "type" : "medium",
     "completed" : false,
-    "name" : "Partition List",
-    "type" : "medium"
+    "name" : "Partition List"
   },
   {
+    "completed" : false,
     "name" : "LRU Cache",
-    "completed" : false,
     "type" : "medium"
   },
   {
     "type" : "medium",
-    "completed" : false,
-    "name" : "Construct Binary Tree from Preorder and Inorder Traversal"
+    "name" : "Construct Binary Tree from Preorder and Inorder Traversal",
+    "completed" : false
   },
   {
     "completed" : false,
+    "name" : "Construct Binary Tree from Inorder and Postorder Traversal",
+    "type" : "medium"
+  },
+  {
+    "name" : "Populating Next Right Pointers in Each Node II",
     "type" : "medium",
-    "name" : "Construct Binary Tree from Inorder and Postorder Traversal"
+    "completed" : false
   },
   {
     "type" : "medium",
     "completed" : false,
-    "name" : "Populating Next Right Pointers in Each Node II"
-  },
-  {
-    "completed" : false,
-    "type" : "medium",
     "name" : "Flatten Binary Tree to Linked List"
   },
   {
-    "type" : "medium",
     "name" : "Sum Root to Leaf Numbers",
+    "type" : "medium",
     "completed" : false
   },
   {
@@ -545,13 +545,13 @@
     "name" : "Lowest Common Ancestor of a Binary Tree"
   },
   {
-    "name" : "Binary Tree Right Side View",
     "type" : "medium",
-    "completed" : false
+    "completed" : false,
+    "name" : "Binary Tree Right Side View"
   },
   {
-    "completed" : false,
     "name" : "Binary Tree Level Order Traversal",
+    "completed" : false,
     "type" : "medium"
   },
   {
@@ -560,59 +560,59 @@
     "completed" : false
   },
   {
+    "completed" : false,
     "name" : "Kth Smallest Element in a BST",
-    "completed" : false,
     "type" : "medium"
   },
   {
     "completed" : false,
-    "name" : "Validate Binary Search Tree",
-    "type" : "medium"
-  },
-  {
     "type" : "medium",
+    "name" : "Validate Binary Search Tree"
+  },
+  {
+    "completed" : false,
     "name" : "Number of Islands",
-    "completed" : false
-  },
-  {
-    "name" : "Surrounded Regions",
-    "completed" : false,
     "type" : "medium"
   },
   {
+    "type" : "medium",
     "completed" : false,
+    "name" : "Surrounded Regions"
+  },
+  {
     "name" : "Clone Graph",
-    "type" : "medium"
-  },
-  {
-    "name" : "Evaluate Division",
-    "completed" : false,
-    "type" : "medium"
+    "type" : "medium",
+    "completed" : false
   },
   {
     "completed" : false,
+    "type" : "medium",
+    "name" : "Evaluate Division"
+  },
+  {
     "name" : "Course Schedule",
+    "completed" : false,
     "type" : "medium"
-  },
-  {
-    "name" : "Course Schedule II",
-    "type" : "medium",
-    "completed" : false
-  },
-  {
-    "name" : "Snakes and Ladders",
-    "type" : "medium",
-    "completed" : false
   },
   {
     "completed" : false,
     "type" : "medium",
+    "name" : "Course Schedule II"
+  },
+  {
+    "completed" : false,
+    "type" : "medium",
+    "name" : "Snakes and Ladders"
+  },
+  {
+    "type" : "medium",
+    "completed" : false,
     "name" : "Minimum Genetic Mutation"
   },
   {
     "name" : "Implement Trie (Prefix Tree)",
-    "completed" : false,
-    "type" : "medium"
+    "type" : "medium",
+    "completed" : false
   },
   {
     "name" : "Design Add and Search Words Data Structure",
@@ -620,33 +620,33 @@
     "completed" : false
   },
   {
+    "type" : "medium",
+    "name" : "Letter Combinations of a Phone Number",
+    "completed" : false
+  },
+  {
+    "type" : "medium",
+    "completed" : false,
+    "name" : "Combinations"
+  },
+  {
     "completed" : false,
     "type" : "medium",
-    "name" : "Letter Combinations of a Phone Number"
+    "name" : "Permutations"
   },
   {
-    "name" : "Combinations",
-    "type" : "medium",
-    "completed" : false
-  },
-  {
-    "name" : "Permutations",
-    "type" : "medium",
-    "completed" : false
-  },
-  {
-    "type" : "medium",
     "name" : "Combination Sum",
-    "completed" : false
-  },
-  {
-    "type" : "medium",
     "completed" : false,
-    "name" : "Generate Parentheses"
+    "type" : "medium"
   },
   {
     "completed" : false,
+    "name" : "Generate Parentheses",
+    "type" : "medium"
+  },
+  {
     "name" : "Word Search",
+    "completed" : false,
     "type" : "medium"
   },
   {
@@ -656,53 +656,53 @@
   },
   {
     "completed" : false,
-    "name" : "Construct Quad Tree",
+    "type" : "medium",
+    "name" : "Construct Quad Tree"
+  },
+  {
+    "completed" : false,
+    "name" : "Maximum Subarray",
+    "type" : "medium"
+  },
+  {
+    "completed" : false,
+    "name" : "Maximum Sum Circular Subarray",
     "type" : "medium"
   },
   {
     "completed" : false,
     "type" : "medium",
-    "name" : "Maximum Subarray"
+    "name" : "Search a 2D Matrix"
+  },
+  {
+    "completed" : false,
+    "type" : "medium",
+    "name" : "Find Peak Element"
+  },
+  {
+    "completed" : false,
+    "type" : "medium",
+    "name" : "Search in Rotated Sorted Array"
   },
   {
     "type" : "medium",
     "completed" : false,
-    "name" : "Maximum Sum Circular Subarray"
-  },
-  {
-    "type" : "medium",
-    "name" : "Search a 2D Matrix",
-    "completed" : false
-  },
-  {
-    "name" : "Find Peak Element",
-    "completed" : false,
-    "type" : "medium"
-  },
-  {
-    "completed" : false,
-    "name" : "Search in Rotated Sorted Array",
-    "type" : "medium"
-  },
-  {
-    "name" : "Find First and Last Position of Element in Sorted Array",
-    "completed" : false,
-    "type" : "medium"
+    "name" : "Find First and Last Position of Element in Sorted Array"
   },
   {
     "name" : "Find Minimum in Rotated Sorted Array",
-    "type" : "medium",
-    "completed" : false
-  },
-  {
-    "name" : "Kth Largest Element in an Array",
-    "type" : "medium",
-    "completed" : false
-  },
-  {
     "completed" : false,
-    "name" : "Find K Pairs with Smallest Sums",
     "type" : "medium"
+  },
+  {
+    "type" : "medium",
+    "completed" : false,
+    "name" : "Kth Largest Element in an Array"
+  },
+  {
+    "name" : "Find K Pairs with Smallest Sums",
+    "type" : "medium",
+    "completed" : false
   },
   {
     "name" : "Single Number II",
@@ -710,24 +710,24 @@
     "completed" : false
   },
   {
+    "type" : "medium",
     "name" : "Bitwise AND of Numbers Range",
-    "completed" : false,
-    "type" : "medium"
+    "completed" : false
   },
   {
     "completed" : false,
-    "type" : "medium",
-    "name" : "Factorial Trailing Zeroes"
+    "name" : "Factorial Trailing Zeroes",
+    "type" : "medium"
   },
   {
     "name" : "Pow(x, n)",
-    "completed" : false,
-    "type" : "medium"
+    "type" : "medium",
+    "completed" : false
   },
   {
-    "completed" : false,
+    "type" : "medium",
     "name" : "House Robber",
-    "type" : "medium"
+    "completed" : false
   },
   {
     "completed" : false,
@@ -735,59 +735,59 @@
     "type" : "medium"
   },
   {
+    "name" : "Coin Change",
+    "completed" : false,
+    "type" : "medium"
+  },
+  {
     "completed" : false,
     "type" : "medium",
-    "name" : "Coin Change"
-  },
-  {
-    "type" : "medium",
-    "name" : "Longest Increasing Subsequence",
-    "completed" : false
-  },
-  {
-    "type" : "medium",
-    "name" : "Triangle",
-    "completed" : false
+    "name" : "Longest Increasing Subsequence"
   },
   {
     "type" : "medium",
     "completed" : false,
+    "name" : "Triangle"
+  },
+  {
+    "completed" : false,
+    "type" : "medium",
     "name" : "Minimum Path Sum"
   },
   {
-    "completed" : false,
     "name" : "Unique Paths II",
-    "type" : "medium"
+    "type" : "medium",
+    "completed" : false
   },
   {
+    "completed" : false,
     "name" : "Longest Palindromic Substring",
-    "type" : "medium",
-    "completed" : false
+    "type" : "medium"
+  },
+  {
+    "completed" : false,
+    "name" : "Interleaving String",
+    "type" : "medium"
   },
   {
     "completed" : false,
     "type" : "medium",
-    "name" : "Interleaving String"
+    "name" : "Edit Distance"
   },
   {
-    "name" : "Edit Distance",
-    "type" : "medium",
-    "completed" : false
-  },
-  {
-    "completed" : false,
     "name" : "Maximal Square",
-    "type" : "medium"
-  },
-  {
-    "completed" : false,
     "type" : "medium",
-    "name" : "Increasing Triplet Subsequence"
+    "completed" : false
   },
   {
+    "name" : "Increasing Triplet Subsequence",
+    "type" : "medium",
+    "completed" : false
+  },
+  {
+    "type" : "medium",
     "name" : "String Compression",
-    "completed" : false,
-    "type" : "medium"
+    "completed" : false
   },
   {
     "name" : "Max Number of K-Sum Pairs",
@@ -795,124 +795,124 @@
     "type" : "medium"
   },
   {
-    "name" : "Maximum Number of Vowels in a Substring of Given Length",
     "type" : "medium",
-    "completed" : false
+    "completed" : false,
+    "name" : "Maximum Number of Vowels in a Substring of Given Length"
   },
   {
+    "completed" : false,
     "name" : "Max Consecutive Ones III",
-    "completed" : false,
     "type" : "medium"
   },
   {
-    "type" : "medium",
     "name" : "Longest Subarray of 1's After Deleting One Element",
-    "completed" : false
-  },
-  {
-    "completed" : false,
-    "name" : "Determine if Two Strings Are Close",
-    "type" : "medium"
-  },
-  {
-    "name" : "Equal Row and Column Pairs",
     "type" : "medium",
     "completed" : false
   },
   {
     "completed" : false,
     "type" : "medium",
+    "name" : "Determine if Two Strings Are Close"
+  },
+  {
+    "type" : "medium",
+    "completed" : false,
+    "name" : "Equal Row and Column Pairs"
+  },
+  {
+    "type" : "medium",
+    "completed" : false,
     "name" : "Removing Stars From a String"
   },
   {
-    "completed" : false,
+    "type" : "medium",
     "name" : "Asteroid Collision",
-    "type" : "medium"
+    "completed" : false
   },
   {
     "name" : "Decode String",
-    "completed" : false,
-    "type" : "medium"
-  },
-  {
-    "completed" : false,
-    "name" : "Dota2 Senate",
-    "type" : "medium"
-  },
-  {
-    "name" : "Delete the Middle Node of a Linked List",
-    "completed" : false,
-    "type" : "medium"
-  },
-  {
     "type" : "medium",
-    "name" : "Odd Even Linked List",
     "completed" : false
   },
   {
-    "name" : "Maximum Twin Sum of a Linked List",
+    "name" : "Dota2 Senate",
+    "type" : "medium",
+    "completed" : false
+  },
+  {
+    "type" : "medium",
+    "completed" : false,
+    "name" : "Delete the Middle Node of a Linked List"
+  },
+  {
+    "name" : "Odd Even Linked List",
     "completed" : false,
     "type" : "medium"
   },
   {
     "type" : "medium",
     "completed" : false,
-    "name" : "Count Good Nodes in Binary Tree"
+    "name" : "Maximum Twin Sum of a Linked List"
   },
   {
-    "name" : "Path Sum III",
+    "name" : "Count Good Nodes in Binary Tree",
     "completed" : false,
     "type" : "medium"
+  },
+  {
+    "type" : "medium",
+    "completed" : false,
+    "name" : "Path Sum III"
   },
   {
     "name" : "Longest ZigZag Path in a Binary Tree",
-    "completed" : false,
-    "type" : "medium"
+    "type" : "medium",
+    "completed" : false
+  },
+  {
+    "name" : "Maximum Level Sum of a Binary Tree",
+    "type" : "medium",
+    "completed" : false
   },
   {
     "type" : "medium",
     "completed" : false,
-    "name" : "Maximum Level Sum of a Binary Tree"
+    "name" : "Delete Node in a BST"
   },
   {
-    "name" : "Delete Node in a BST",
     "completed" : false,
-    "type" : "medium"
-  },
-  {
     "name" : "Keys and Rooms",
-    "type" : "medium",
-    "completed" : false
+    "type" : "medium"
   },
   {
     "completed" : false,
-    "type" : "medium",
-    "name" : "Number of Provinces"
+    "name" : "Number of Provinces",
+    "type" : "medium"
   },
   {
     "completed" : false,
-    "type" : "medium",
-    "name" : "Reorder Routes to Make All Paths Lead to the City Zero"
+    "name" : "Reorder Routes to Make All Paths Lead to the City Zero",
+    "type" : "medium"
   },
   {
+    "type" : "medium",
     "name" : "Nearest Exit from Entrance in Maze",
-    "type" : "medium",
-    "completed" : false
-  },
-  {
-    "name" : "Rotting Oranges",
-    "type" : "medium",
     "completed" : false
   },
   {
     "completed" : false,
     "type" : "medium",
+    "name" : "Rotting Oranges"
+  },
+  {
+    "type" : "medium",
+    "completed" : false,
     "name" : "Smallest Number in Infinite Set"
   },
   {
+    "completed" : false,
     "type" : "medium",
-    "name" : "Maximum Subsequence Score",
-    "completed" : false
+    "name" : "Maximum Subsequence Score"
   },
   {
     "type" : "medium",
@@ -920,29 +920,29 @@
     "name" : "Total Cost to Hire K Workers"
   },
   {
-    "type" : "medium",
     "completed" : false,
-    "name" : "Successful Pairs of Spells and Potions"
-  },
-  {
-    "completed" : false,
-    "name" : "Koko Eating Bananas",
+    "name" : "Successful Pairs of Spells and Potions",
     "type" : "medium"
   },
   {
+    "name" : "Koko Eating Bananas",
+    "type" : "medium",
+    "completed" : false
+  },
+  {
+    "completed" : false,
     "name" : "Combination Sum III",
+    "type" : "medium"
+  },
+  {
+    "name" : "Domino and Tromino Tiling",
     "type" : "medium",
     "completed" : false
   },
   {
     "completed" : false,
     "type" : "medium",
-    "name" : "Domino and Tromino Tiling"
-  },
-  {
-    "completed" : false,
-    "name" : "Unique Paths",
-    "type" : "medium"
+    "name" : "Unique Paths"
   },
   {
     "type" : "medium",
@@ -950,69 +950,69 @@
     "name" : "Longest Common Subsequence"
   },
   {
-    "type" : "medium",
     "name" : "Best Time to Buy and Sell Stock with Transaction Fee",
-    "completed" : false
-  },
-  {
     "completed" : false,
-    "name" : "Minimum Flips to Make a OR b Equal to c",
     "type" : "medium"
   },
   {
     "completed" : false,
     "type" : "medium",
-    "name" : "Search Suggestions System"
+    "name" : "Minimum Flips to Make a OR b Equal to c"
   },
   {
-    "name" : "Non-overlapping Intervals",
-    "type" : "medium",
-    "completed" : false
-  },
-  {
-    "name" : "Daily Temperatures",
-    "type" : "medium",
-    "completed" : false
+    "completed" : false,
+    "name" : "Search Suggestions System",
+    "type" : "medium"
   },
   {
     "completed" : false,
     "type" : "medium",
-    "name" : "Online Stock Span"
+    "name" : "Non-overlapping Intervals"
   },
   {
     "type" : "medium",
+    "completed" : false,
+    "name" : "Daily Temperatures"
+  },
+  {
+    "completed" : false,
+    "name" : "Online Stock Span",
+    "type" : "medium"
+  },
+  {
     "name" : "Subsets",
+    "type" : "medium",
     "completed" : false
   },
   {
-    "type" : "medium",
     "completed" : false,
+    "type" : "medium",
     "name" : "Palindrome Partitioning"
   },
   {
-    "name" : "Maximum Product Subarray",
-    "type" : "medium",
-    "completed" : false
-  },
-  {
-    "type" : "medium",
-    "name" : "Perfect Squares",
-    "completed" : false
-  },
-  {
     "type" : "medium",
     "completed" : false,
+    "name" : "Maximum Product Subarray"
+  },
+  {
+    "completed" : false,
+    "type" : "medium",
+    "name" : "Perfect Squares"
+  },
+  {
+    "completed" : false,
+    "type" : "medium",
     "name" : "Partition Equal Subset Sum"
   },
   {
     "type" : "medium",
-    "completed" : false,
-    "name" : "Partition Labels"
+    "name" : "Partition Labels",
+    "completed" : false
   },
   {
-    "type" : "medium",
+    "name" : "Subarray Sum Equals K",
     "completed" : false,
-    "name" : "Subarray Sum Equals K"
+    "type" : "medium"
   },
   {
     "type" : "medium",
@@ -1021,27 +1021,27 @@
   },
   {
     "name" : "Swap Nodes in Pairs",
-    "completed" : false,
-    "type" : "medium"
-  },
-  {
-    "completed" : false,
-    "name" : "Linked List Cycle II",
-    "type" : "medium"
-  },
-  {
-    "name" : "Search a 2D Matrix II",
     "type" : "medium",
     "completed" : false
   },
   {
+    "name" : "Linked List Cycle II",
     "completed" : false,
-    "name" : "Find All Anagrams in a String",
     "type" : "medium"
   },
   {
+    "completed" : false,
     "type" : "medium",
+    "name" : "Search a 2D Matrix II"
+  },
+  {
+    "type" : "medium",
+    "completed" : false,
+    "name" : "Find All Anagrams in a String"
+  },
+  {
     "name" : "Next Permutation",
+    "type" : "medium",
     "completed" : false
   },
   {
@@ -1051,8 +1051,8 @@
   },
   {
     "name" : "Find the Duplicate Number",
-    "completed" : false,
-    "type" : "medium"
+    "type" : "medium",
+    "completed" : false
   },
   {
     "name" : "Candy",
@@ -1061,38 +1061,38 @@
   },
   {
     "completed" : false,
-    "type" : "hard",
-    "name" : "Trapping Rain Water"
+    "name" : "Trapping Rain Water",
+    "type" : "hard"
   },
   {
-    "completed" : false,
     "type" : "hard",
+    "completed" : false,
     "name" : "Text Justification"
   },
   {
+    "name" : "Substring with Concatenation of All Words",
     "type" : "hard",
-    "completed" : false,
-    "name" : "Substring with Concatenation of All Words"
+    "completed" : false
   },
   {
-    "name" : "Minimum Window Substring",
     "completed" : false,
-    "type" : "hard"
+    "type" : "hard",
+    "name" : "Minimum Window Substring"
   },
   {
     "name" : "Basic Calculator",
+    "type" : "hard",
+    "completed" : false
+  },
+  {
+    "name" : "Reverse Nodes in k-Group",
+    "type" : "hard",
+    "completed" : false
+  },
+  {
+    "name" : "Binary Tree Maximum Path Sum",
     "completed" : false,
     "type" : "hard"
-  },
-  {
-    "type" : "hard",
-    "completed" : false,
-    "name" : "Reverse Nodes in k-Group"
-  },
-  {
-    "type" : "hard",
-    "name" : "Binary Tree Maximum Path Sum",
-    "completed" : false
   },
   {
     "name" : "Word Ladder",
@@ -1100,39 +1100,39 @@
     "completed" : false
   },
   {
-    "completed" : false,
     "name" : "Word Search II",
-    "type" : "hard"
-  },
-  {
     "type" : "hard",
-    "name" : "N-Queens II",
     "completed" : false
   },
   {
     "type" : "hard",
     "completed" : false,
-    "name" : "Merge k Sorted Lists"
+    "name" : "N-Queens II"
   },
   {
-    "completed" : false,
-    "name" : "Median of Two Sorted Arrays",
-    "type" : "hard"
-  },
-  {
-    "type" : "hard",
-    "completed" : false,
-    "name" : "IPO"
-  },
-  {
-    "name" : "Find Median from Data Stream",
+    "name" : "Merge k Sorted Lists",
     "completed" : false,
     "type" : "hard"
   },
   {
     "type" : "hard",
+    "completed" : false,
+    "name" : "Median of Two Sorted Arrays"
+  },
+  {
+    "type" : "hard",
+    "name" : "IPO",
+    "completed" : false
+  },
+  {
+    "completed" : false,
+    "type" : "hard",
+    "name" : "Find Median from Data Stream"
+  },
+  {
+    "completed" : false,
     "name" : "Max Points on a Line",
-    "completed" : false
+    "type" : "hard"
   },
   {
     "type" : "hard",
@@ -1140,9 +1140,9 @@
     "name" : "Best Time to Buy and Sell Stock III"
   },
   {
-    "type" : "hard",
     "completed" : false,
-    "name" : "Best Time to Buy and Sell Stock IV"
+    "name" : "Best Time to Buy and Sell Stock IV",
+    "type" : "hard"
   },
   {
     "type" : "hard",
@@ -1150,23 +1150,23 @@
     "completed" : false
   },
   {
+    "name" : "Longest Valid Parentheses",
     "type" : "hard",
-    "completed" : false,
-    "name" : "Longest Valid Parentheses"
+    "completed" : false
   },
   {
+    "completed" : false,
     "name" : "Sliding Window Maximum",
-    "completed" : false,
-    "type" : "hard"
-  },
-  {
-    "completed" : false,
-    "name" : "Largest Rectangle in Histogram",
     "type" : "hard"
   },
   {
     "type" : "hard",
     "completed" : false,
-    "name" : "First Missing Positive"
+    "name" : "Largest Rectangle in Histogram"
+  },
+  {
+    "type" : "hard",
+    "name" : "First Missing Positive",
+    "completed" : false
   }
 ]

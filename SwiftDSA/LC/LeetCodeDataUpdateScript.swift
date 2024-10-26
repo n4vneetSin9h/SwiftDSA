@@ -40,7 +40,15 @@ struct LCPConstants {
                          "Candy",
                          "Ransom Note",
                          "Isomorphic Strings",
-                         "Word Pattern"]
+                         "Word Pattern",
+                         "Valid Anagram",
+                         "Happy Number",
+                         "Contains Duplicate II",
+                         "Linked List Cycle",
+                         "Climbing Stairs",
+                         "Sqrt(x)",
+                         "Plus One",
+                         "Add Binary"]
 }
 
 class LCPUpdateScript {
@@ -52,6 +60,19 @@ class LCPUpdateScript {
     
     static func run() { getFileData() }
     
+    static func getSolvedProblemsList() {
+        do {
+            let jsonData = try Data(contentsOf: URL(fileURLWithPath: LCPConstants.path), options: .mappedIfSafe)
+            objs = try JSONDecoder().decode([LCP].self, from: jsonData)
+            let solvedProblems = objs.filter({$0.completed == true})
+            for problem in solvedProblems {
+                print(problem.name)
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
     static func checkSolvedCount() {
         do {
             let jsonData = try Data(contentsOf: URL(fileURLWithPath: LCPConstants.path), options: .mappedIfSafe)
@@ -61,7 +82,6 @@ class LCPUpdateScript {
         } catch {
             print(error.localizedDescription)
         }
-        
     }
     
     private static func getFileData() {
