@@ -149,7 +149,11 @@ struct LCPConstants {
                          "Text Justification",
                          "Container With Most Water",
                          "3Sum",
-                         "Minimum Size Subarray Sum"]
+                         "Minimum Size Subarray Sum",
+                         "Substring with Concatenation of All Words",
+                         "Minimum Window Substring",
+                         "Group Anagrams",
+                         "Longest Consecutive Sequence"]
 }
 
 

@@ -1105,20 +1105,168 @@ class LeetCodeSolutions {
     
     // MARK: Minimum Size Subarray Sum
     func minSubArrayLen(_ target: Int, _ nums: [Int]) -> Int {
-            var left = 0
-            var sum = 0
-            var minLength = Int.max
+        var left = 0
+        var sum = 0
+        var minLength = Int.max
+        
+        for right in 0..<nums.count {
+            sum += nums[right]
             
-            for right in 0..<nums.count {
-                sum += nums[right]
+            while sum >= target {
+                minLength = min(minLength, right - left + 1)
+                sum -= nums[left]
+                left += 1
+            }
+        }
+        
+        return minLength == Int.max ? 0 : minLength
+    }
+    
+    // MARK: Substring with Concatenation of All Words
+    func findSubstring(_ s: String, _ words: [String]) -> [Int] {
+        guard !s.isEmpty, !words.isEmpty else { return [] }
+        
+        let wordLength = words[0].count
+        let substringLength = wordLength * words.count
+        let totalLength = s.count
+        var result = [Int]()
+        
+        // Word count map for words list
+        var wordCount = [String: Int]()
+        for word in words {
+            wordCount[word, default: 0] += 1
+        }
+        
+        let sArray = Array(s)
+        
+        // Slide over each possible starting position in the string
+        for i in 0..<wordLength {
+            var left = i, count = 0
+            var currentCount = [String: Int]()
+            
+            for j in stride(from: i, to: totalLength - wordLength + 1, by: wordLength) {
+                let word = String(sArray[j..<j+wordLength])
                 
-                while sum >= target {
-                    minLength = min(minLength, right - left + 1)
-                    sum -= nums[left]
-                    left += 1
+                // If word is in the list
+                if let requiredCount = wordCount[word] {
+                    currentCount[word, default: 0] += 1
+                    count += 1
+                    
+                    // If we have more of 'word' than needed, slide left pointer
+                    while currentCount[word]! > requiredCount {
+                        let leftWord = String(sArray[left..<left+wordLength])
+                        currentCount[leftWord]! -= 1
+                        left += wordLength
+                        count -= 1
+                    }
+                    
+                    // If all words matched, store the starting index
+                    if count == words.count {
+                        result.append(left)
+                    }
+                    
+                } else {
+                    // Reset if word is not in words
+                    currentCount.removeAll()
+                    count = 0
+                    left = j + wordLength
                 }
             }
-            
-            return minLength == Int.max ? 0 : minLength
         }
+        
+        return result
+    }
+    
+    // MARK: Minimum Window Substring
+    func minWindow(_ s: String, _ t: String) -> String {
+        guard !s.isEmpty, !t.isEmpty else { return "" }
+        
+        // Step 1: Build a hashmap for the target characters in `t`
+        var tCount = [Character: Int]()
+        for char in t {
+            tCount[char, default: 0] += 1
+        }
+        
+        // Step 2: Initialize pointers and variables
+        var left = 0
+        var minLength = Int.max
+        var minStart = 0
+        var windowCount = [Character: Int]()
+        var formed = 0
+        let required = tCount.count
+        let sArray = Array(s) // Convert `s` to an array for easier access by index
+        
+        // Step 3: Slide the `right` pointer to expand the window
+        for right in 0..<sArray.count {
+            let char = sArray[right]
+            windowCount[char, default: 0] += 1
+            
+            if let countInT = tCount[char], windowCount[char] == countInT {
+                formed += 1
+            }
+            
+            // Step 4: Once we have a valid window, contract it from the left
+            while formed == required {
+                let windowSize = right - left + 1
+                if windowSize < minLength {
+                    minLength = windowSize
+                    minStart = left
+                }
+                
+                let leftChar = sArray[left]
+                windowCount[leftChar]! -= 1
+                if let countInT = tCount[leftChar], windowCount[leftChar]! < countInT {
+                    formed -= 1
+                }
+                
+                left += 1
+            }
+        }
+        
+        return minLength == Int.max ? "" : String(sArray[minStart..<minStart + minLength])
+    }
+    
+    // MARK: Group Anagrams
+    func groupAnagrams(_ strs: [String]) -> [[String]] {
+        var anagrams = [String: [String]]()
+        
+        for str in strs {
+            // Sort the characters of the string to create a key
+            let sortedStr = String(str.sorted())
+            
+            // Group by the sorted string
+            anagrams[sortedStr, default: []].append(str)
+        }
+        
+        // Return all the grouped anagrams
+        return Array(anagrams.values)
+    }
+    
+    // MARK: Longest Consecutive Sequence
+    func longestConsecutive(_ nums: [Int]) -> Int {
+        guard !nums.isEmpty else { return 0 }
+        
+        // Create a set for quick lookup of elements
+        let numSet = Set(nums)
+        var longestStreak = 0
+        
+        for num in numSet {
+            // Only start counting if it's the beginning of a sequence
+            if !numSet.contains(num - 1) {
+                var currentNum = num
+                var currentStreak = 1
+                
+                // Count consecutive numbers
+                while numSet.contains(currentNum + 1) {
+                    currentNum += 1
+                    currentStreak += 1
+                }
+                
+                // Update longest streak
+                longestStreak = max(longestStreak, currentStreak)
+            }
+        }
+        
+        return longestStreak
+    }
 }
