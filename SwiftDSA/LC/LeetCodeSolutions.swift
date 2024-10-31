@@ -899,4 +899,207 @@ class LeetCodeSolutions {
         return candies.reduce(0, +)
     }
     
+    // MARK: Gas Station
+    func canCompleteCircuit(_ gas: [Int], _ cost: [Int]) -> Int {
+        var totalGas = 0
+        var totalCost = 0
+        var currentGas = 0
+        var startIndex = 0
+        
+        for i in 0..<gas.count {
+            totalGas += gas[i]
+            totalCost += cost[i]
+            currentGas += gas[i] - cost[i]
+            
+            if currentGas < 0 {
+                startIndex = i + 1
+                currentGas = 0
+            }
+        }
+        
+        return totalGas >= totalCost ? startIndex : -1
+    }
+    
+    // MARK: Integer to Roman
+    func intToRoman(_ num: Int) -> String {
+        // Mapping values to Roman numerals in descending order
+        let values = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+        let symbols = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
+        
+        var num = num
+        var result = ""
+        
+        while num > 0 {
+            for (ind, number) in values.enumerated() where num - number >= 0 {
+                num -= number
+                result += symbols[ind]
+                break
+            }
+        }
+        
+        return result
+    }
+    
+    // MARK: Maximum Depth of Binary Tree
+    public class TreeNode {
+        public var val: Int
+        public var left: TreeNode?
+        public var right: TreeNode?
+        public init() { self.val = 0; self.left = nil; self.right = nil; }
+        public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+        public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+            self.val = val
+            self.left = left
+            self.right = right
+        }
+    }
+    
+    class Solution {
+        
+        var max = 0
+        
+        func maxDepth(_ root: TreeNode?) -> Int {
+            guard root != nil else { return 0 }
+            return dfs(root, 0)
+        }
+        
+        func dfs(_ node: TreeNode?,_ current: Int) -> Int {
+            guard node != nil else { return current }
+            if current > max {
+                max = current
+            }
+            let left = dfs(node!.left, current + 1)
+            let right = dfs(node!.right, current + 1)
+            
+            return left > right ? left : right
+        }
+    }
+    
+    // MARK: Reverse Words in a String
+    func reverseWords(_ s: String) -> String {
+        return s.split(separator: " ").reversed().joined(separator: " ")
+    }
+    
+    // MARK: Trapping Rain Water
+    func trap(_ height: [Int]) -> Int {
+        var left = 0, right = height.count - 1
+        var leftMax = 0, rightMax = 0
+        var waterTrapped = 0
+        
+        while left < right {
+            if height[left] < height[right] {
+                if height[left] >= leftMax {
+                    leftMax = height[left]
+                } else {
+                    waterTrapped += leftMax - height[left]
+                }
+                left += 1
+            } else {
+                if height[right] >= rightMax {
+                    rightMax = height[right]
+                } else {
+                    waterTrapped += rightMax - height[right]
+                }
+                right -= 1
+            }
+        }
+        
+        return waterTrapped
+    }
+    
+    // MARK: Zigzag Conversion
+    func convert(_ s: String, _ numRows: Int) -> String {
+        if numRows == 1 || numRows >= s.count { return s }
+        
+        var rows = Array(repeating: "", count: numRows)
+        var currentRow = 0
+        var goingDown = false
+        
+        for char in s {
+            rows[currentRow] += String(char)
+            if currentRow == 0 || currentRow == numRows - 1 {
+                goingDown.toggle()
+            }
+            currentRow += goingDown ? 1 : -1
+        }
+        
+        return rows.joined()
+    }
+    
+    // MARK: Text Justification
+    func fullJustify(_ words: [String], _ maxWidth: Int) -> [String] {
+        var result = [String]()
+        var currentLine = [String]()
+        var lineLength = 0
+        
+        for word in words {
+            if lineLength + word.count + currentLine.count > maxWidth {
+                for i in 0..<maxWidth - lineLength {
+                    currentLine[i % (currentLine.count - 1 > 0 ? currentLine.count - 1 : 1)] += " "
+                }
+                result.append(currentLine.joined())
+                currentLine = [word]
+                lineLength = word.count
+            } else {
+                currentLine.append(word)
+                lineLength += word.count
+            }
+        }
+        
+        let lastLine = currentLine.joined(separator: " ")
+        result.append(lastLine + String(repeating: " ", count: maxWidth - lastLine.count))
+        
+        return result
+    }
+    
+    // MARK: Container With Most Water
+    func maxArea(_ height: [Int]) -> Int {
+        var left = 0
+        var right = height.count - 1
+        var maxArea = 0
+        while left != right {
+            let area = min(height[left], height[right]) * (right - left)
+            if maxArea < area {
+                maxArea = area
+            }
+            
+            if height[left] < height[right] {
+                left += 1
+            } else {
+                right -= 1
+            }
+        }
+        
+        return maxArea
+    }
+    
+    // MARK: 3Sum
+    func threeSum(_ nums: [Int]) -> [[Int]] {
+        let nums = nums.sorted()
+        var result = [[Int]]()
+        
+        for i in 0..<nums.count {
+            if i > 0 && nums[i] == nums[i - 1] { continue }  // Avoid duplicates
+            
+            var left = i + 1
+            var right = nums.count - 1
+            
+            while left < right {
+                let sum = nums[i] + nums[left] + nums[right]
+                if sum == 0 {
+                    result.append([nums[i], nums[left], nums[right]])
+                    while left < right && nums[left] == nums[left + 1] { left += 1 }
+                    while left < right && nums[right] == nums[right - 1] { right -= 1 }
+                    left += 1
+                    right -= 1
+                } else if sum < 0 {
+                    left += 1
+                } else {
+                    right -= 1
+                }
+            }
+        }
+        
+        return result
+    }
 }
