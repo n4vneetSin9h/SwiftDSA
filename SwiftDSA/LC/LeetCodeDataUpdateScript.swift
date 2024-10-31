@@ -148,7 +148,8 @@ struct LCPConstants {
                          "Zigzag Conversion",
                          "Text Justification",
                          "Container With Most Water",
-                         "3Sum"]
+                         "3Sum",
+                         "Minimum Size Subarray Sum"]
 }
 
 
