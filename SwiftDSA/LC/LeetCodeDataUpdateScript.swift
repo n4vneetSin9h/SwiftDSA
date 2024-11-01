@@ -153,7 +153,15 @@ struct LCPConstants {
                          "Substring with Concatenation of All Words",
                          "Minimum Window Substring",
                          "Group Anagrams",
-                         "Longest Consecutive Sequence"]
+                         "Longest Consecutive Sequence",
+                         "Valid Sudoku",
+                         "Spiral Matrix",
+                         "Set Matrix Zeroes",
+                         "Game of Life",
+                         "Summary Ranges",
+                         "Merge Intervals",
+                         "Insert Interval",
+                         "Minimum Number of Arrows to Burst Balloons"]
 }
 
 

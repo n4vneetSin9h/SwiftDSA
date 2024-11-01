@@ -1269,4 +1269,275 @@ class LeetCodeSolutions {
         
         return longestStreak
     }
+    
+    // MARK: Valid Sudoku
+    func isValidSudoku(_ board: [[Character]]) -> Bool {
+        var rows = Array(repeating: Set<Character>(), count: 9)
+        var cols = Array(repeating: Set<Character>(), count: 9)
+        var boxes = Array(repeating: Set<Character>(), count: 9)
+        
+        for i in 0..<9 {
+            for j in 0..<9 {
+                let char = board[i][j]
+                
+                if char == "." {
+                    continue
+                }
+                
+                // Check row
+                if rows[i].contains(char) {
+                    return false
+                }
+                rows[i].insert(char)
+                
+                // Check column
+                if cols[j].contains(char) {
+                    return false
+                }
+                cols[j].insert(char)
+                
+                // Check 3x3 box
+                let boxIndex = (i / 3) * 3 + j / 3
+                if boxes[boxIndex].contains(char) {
+                    return false
+                }
+                boxes[boxIndex].insert(char)
+            }
+        }
+        
+        return true
+    }
+    
+    // MARK: Spiral Matrix
+    func spiralOrder(_ matrix: [[Int]]) -> [Int] {
+        let count = (matrix.count + 1) / 2
+        let row = matrix.count
+        let col = matrix[0].count
+        var result: [Int] = []
+        
+        for i in 0..<count {
+            
+            for j in i..<col - i - 1 {
+                let x = i
+                let y = j
+                result.append(matrix[x][y])
+                if result.count == row * col { break }
+            }
+            
+            for j in i..<row - i - 1 {
+                let x = j
+                let y = col - i - 1
+                result.append(matrix[x][y])
+                if result.count == row * col { break }
+            }
+            
+            for j in i..<col - i - 1 {
+                let x = row - i - 1
+                let y = col - j - 1
+                result.append(matrix[x][y])
+                if result.count == row * col { break }
+            }
+            
+            for j in i..<row - i - 1 {
+                let x = row - j - 1
+                let y = i
+                result.append(matrix[x][y])
+                if result.count == row * col { break }
+            }
+            
+            if result.count == row * col { break }
+        }
+        
+        if result.count == row * col - 1 {
+            result.append(matrix[row / 2][col / 2])
+        }
+        
+        return result
+    }
+    
+    // MARK: Set Matrix Zeroes
+    func setZeroes(_ grid: inout [[Int]]) {
+        var rows: Set<Int> = .init()
+        var cols: Set<Int> = .init()
+        
+        for row in 0..<grid.count {
+            for col in 0..<grid[0].count {
+                if grid[row][col] == 0 {
+                    rows.insert(row)
+                    cols.insert(col)
+                }
+            }
+        }
+        
+        for row in 0..<grid.count {
+            if rows.contains(row) {
+                for col in 0..<grid[0].count {
+                    grid[row][col] = 0
+                }
+            } else {
+                for col in cols {
+                    grid[row][col] = 0
+                }
+            }
+        }
+    }
+    
+    // MARK: Game of Life
+    func gameOfLife(_ board: inout [[Int]]) {
+        let rows = board.count
+        let cols = board[0].count
+        
+        // Iterate through each cell to determine the next state
+        for row in 0..<rows {
+            for col in 0..<cols {
+                let liveNeighbors = countLiveNeighbors(board, row, col)
+                
+                // Mark cells for transition using bit manipulation
+                if board[row][col] == 1 {
+                    if liveNeighbors == 2 || liveNeighbors == 3 {
+                        board[row][col] = 3  // Mark cell as live in the next state
+                    }
+                } else {
+                    if liveNeighbors == 3 {
+                        board[row][col] = 2  // Mark cell as live in the next state
+                    }
+                }
+            }
+        }
+        
+        // Update board to the next state by shifting bits
+        for row in 0..<rows {
+            for col in 0..<cols {
+                board[row][col] >>= 1  // Right shift to get the next state
+            }
+        }
+    }
+    
+    // Helper function to count live neighbors
+    func countLiveNeighbors(_ board: [[Int]], _ row: Int, _ col: Int) -> Int {
+        let directions = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]
+        var liveCount = 0
+        
+        for (dr, dc) in directions {
+            let newRow = row + dr
+            let newCol = col + dc
+            if newRow >= 0 && newRow < board.count && newCol >= 0 && newCol < board[0].count {
+                liveCount += board[newRow][newCol] & 1  // Check the least significant bit
+            }
+        }
+        
+        return liveCount
+    }
+    
+    // MARK: Summary Ranges
+    func summaryRanges(_ nums: [Int]) -> [String] {
+        guard !nums.isEmpty else { return [] }
+        
+        var result = [String]()
+        var start = nums[0]
+        
+        for i in 1..<nums.count {
+            // Check if the current number is not consecutive
+            if nums[i] != nums[i - 1] + 1 {
+                if start == nums[i - 1] {
+                    result.append("\(start)")
+                } else {
+                    result.append("\(start)->\(nums[i - 1])")
+                }
+                start = nums[i]
+            }
+        }
+        
+        // Handle the last range
+        if start == nums.last! {
+            result.append("\(start)")
+        } else {
+            result.append("\(start)->\(nums.last!)")
+        }
+        
+        return result
+    }
+    
+    // MARK: Merge Intervals
+    func merge(_ intervals: [[Int]]) -> [[Int]] {
+        guard intervals.count > 1 else { return intervals }
+        
+        // Sort intervals by the start time
+        let sortedIntervals = intervals.sorted { $0[0] < $1[0] }
+        var mergedIntervals: [[Int]] = []
+        
+        // Initialize the first interval
+        var currentInterval = sortedIntervals[0]
+        
+        for i in 1..<sortedIntervals.count {
+            let interval = sortedIntervals[i]
+            
+            // Check if intervals overlap
+            if interval[0] <= currentInterval[1] {
+                // Merge the intervals by updating the end of the current interval
+                currentInterval[1] = max(currentInterval[1], interval[1])
+            } else {
+                // No overlap, so add the current interval to the result and update it
+                mergedIntervals.append(currentInterval)
+                currentInterval = interval
+            }
+        }
+        
+        // Add the last interval
+        mergedIntervals.append(currentInterval)
+        
+        return mergedIntervals
+    }
+    
+    // MARK: Insert Interval
+    func insert(_ intervals: [[Int]], _ newInterval: [Int]) -> [[Int]] {
+        var result = [[Int]]()
+        var i = 0
+        let n = intervals.count
+        
+        // Add all intervals that come before the new interval
+        while i < n && intervals[i][1] < newInterval[0] {
+            result.append(intervals[i])
+            i += 1
+        }
+        
+        // Merge intervals that overlap with the new interval
+        var mergedInterval = newInterval
+        while i < n && intervals[i][0] <= mergedInterval[1] {
+            mergedInterval[0] = min(mergedInterval[0], intervals[i][0])
+            mergedInterval[1] = max(mergedInterval[1], intervals[i][1])
+            i += 1
+        }
+        result.append(mergedInterval)
+        
+        // Add all intervals that come after the merged interval
+        while i < n {
+            result.append(intervals[i])
+            i += 1
+        }
+        
+        return result
+    }
+    
+    // MARK: Minimum Number of Arrows to Burst Balloons
+    func findMinArrowShots(_ points: [[Int]]) -> Int {
+        guard points.count > 1 else { return points.count }
+        
+        // Sort balloons by their end coordinates
+        let sortedPoints = points.sorted { $0[1] < $1[1] }
+        
+        var arrows = 1
+        var lastEnd = sortedPoints[0][1]
+        
+        for point in sortedPoints {
+            // If the current balloon starts after the last arrow's end position, we need a new arrow
+            if point[0] > lastEnd {
+                arrows += 1
+                lastEnd = point[1]
+            }
+        }
+        
+        return arrows
+    }
+    
 }
