@@ -437,6 +437,13 @@ class LeetCodeSolutions {
         public init() { self.val = 0; self.next = nil; }
         public init(_ val: Int) { self.val = val; self.next = nil; }
         public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
+        public func printList() {
+            var node: ListNode? = self
+            while node != nil {
+                print(node!.val)
+                node = node?.next
+            }
+        }
     }
     
     func hasCycle(_ head: ListNode?) -> Bool {
@@ -1127,7 +1134,7 @@ class LeetCodeSolutions {
         guard !s.isEmpty, !words.isEmpty else { return [] }
         
         let wordLength = words[0].count
-        let substringLength = wordLength * words.count
+        //        let substringLength = wordLength * words.count
         let totalLength = s.count
         var result = [Int]()
         
@@ -1538,6 +1545,173 @@ class LeetCodeSolutions {
         }
         
         return arrows
+    }
+    
+    // MARK: Min Stack
+    class MinStack {
+        
+        var items: [Int] = []
+        
+        var minStack: [Int] = []
+        
+        var min: Int = Int.max
+        
+        init() {
+            
+        }
+        
+        func push(_ val: Int) {
+            if min >= val {
+                self.min = val
+                minStack.append(val)
+            }
+            
+            items.append(val)
+        }
+        
+        func pop() {
+            if items.isEmpty {
+                return
+            }
+            
+            let val = items.removeLast()
+            
+            if val == min {
+                _ = minStack.removeLast()
+                self.min = minStack.last ?? Int.max
+            }
+        }
+        
+        func top() -> Int {
+            items.last ?? Int.min
+        }
+        
+        func getMin() -> Int {
+            self.min
+        }
+    }
+    
+    // MARK: Simplify Path
+    func simplifyPath(_ path: String) -> String {
+        var stack = [String]()
+        let components = path.split(separator: "/") // Split by `/`
+        
+        for component in components {
+            switch component {
+            case "..":
+                // Go up one directory (pop from stack if not empty)
+                if !stack.isEmpty {
+                    stack.removeLast()
+                }
+            case ".", "":
+                // Ignore current directory `.` and empty components
+                continue
+            default:
+                // Push the directory onto the stack
+                stack.append(String(component))
+            }
+        }
+        
+        // Reconstruct the path by joining the stack with `/`
+        return "/" + stack.joined(separator: "/")
+    }
+    
+    // MARK: Evaluate Reverse Polish Notation
+    func evalRPN(_ tokens: [String]) -> Int {
+        var result: [Int] = []
+        for val in tokens {
+            if let num = Int(val) {
+                result.append(num)
+            } else {
+                switch val {
+                case "+":
+                    result.append(result.removeLast() + result.removeLast())
+                    break
+                case "-":
+                    result.append(-result.removeLast() + result.removeLast())
+                    break
+                case "*":
+                    result.append(result.removeLast() * result.removeLast())
+                    break
+                case "/":
+                    result.append(Int(1/(Double(result.removeLast()) / Double(result.removeLast()))))
+                    break
+                default:
+                    break
+                }
+            }
+        }
+        
+        return result.last!
+    }
+    
+    // MARK: Basic Calculator
+    func calculate(_ s: String) -> Int {
+        var result = 0
+        var currentNumber = 0
+        var sign = 1
+        var stack = [Int]()
+        
+        for char in s {
+            if let digit = char.wholeNumberValue {
+                // Accumulate current number if digit
+                currentNumber = currentNumber * 10 + digit
+            } else if char == "+" {
+                // Process addition
+                result += sign * currentNumber
+                currentNumber = 0
+                sign = 1
+            } else if char == "-" {
+                // Process subtraction
+                result += sign * currentNumber
+                currentNumber = 0
+                sign = -1
+            } else if char == "(" {
+                // Push result and sign onto stack
+                stack.append(result)
+                stack.append(sign)
+                // Reset result and sign for new expression inside parentheses
+                result = 0
+                sign = 1
+            } else if char == ")" {
+                // Process closing parenthesis
+                result += sign * currentNumber
+                currentNumber = 0
+                // Pop from stack
+                result *= stack.removeLast()  // sign before parentheses
+                result += stack.removeLast()  // result calculated before parentheses
+            }
+        }
+        
+        // Add any remaining number to the result
+        result += sign * currentNumber
+        return result
+    }
+    
+    // MARK: Add Two Numbers
+    func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
+        let dummyHead = ListNode(0)
+        var current = dummyHead
+        var p = l1, q = l2
+        var carry = 0
+        
+        while p != nil || q != nil {
+            let x = p?.val ?? 0
+            let y = q?.val ?? 0
+            let sum = carry + x + y
+            carry = sum / 10
+            current.next = ListNode(sum % 10)
+            current = current.next!
+            
+            if p != nil { p = p?.next }
+            if q != nil { q = q?.next }
+        }
+        
+        if carry > 0 {
+            current.next = ListNode(carry)
+        }
+        
+        return dummyHead.next
     }
     
 }

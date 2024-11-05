@@ -161,7 +161,12 @@ struct LCPConstants {
                          "Summary Ranges",
                          "Merge Intervals",
                          "Insert Interval",
-                         "Minimum Number of Arrows to Burst Balloons"]
+                         "Minimum Number of Arrows to Burst Balloons",
+                         "Min Stack",
+                         "Simplify Path",
+                         "Evaluate Reverse Polish Notation",
+                         "Basic Calculator",
+                         "Add Two Numbers"]
 }
 
 

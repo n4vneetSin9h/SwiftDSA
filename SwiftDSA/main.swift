@@ -8,7 +8,7 @@
 import Foundation
 
 
-// Current Count 61
+// Current Count 66
 LCPUpdateScript.run()
 LCPUpdateScript.checkSolvedCount()
 //LCPUpdateScript.getSolvedProblemsList()
